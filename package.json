@@ -8,6 +8,7 @@
     "start": "node node_modules/.bin/webpack-dev-server --content-base app/ --hot"
   },
   "devDependencies": {
+    "autoprefixer-loader": "^2.0.0",
     "css-loader": "^0.15.6",
     "node-sass": "^3.2.0",
     "sass-loader": "^1.0.3",
