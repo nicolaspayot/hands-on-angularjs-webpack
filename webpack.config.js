@@ -14,6 +14,14 @@
     output: {
         path: app,
         filename: 'bundle.js'
+    },
+    module: {
+      loaders: [
+        {
+          test: /\.scss$/,
+          loader: 'style!css!sass'
+        }
+      ]
     }
   };
 }());

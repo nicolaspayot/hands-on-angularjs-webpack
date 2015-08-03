@@ -1,6 +1,8 @@
 (function() {
   'use strict';
 
+  require('./index.scss');
+
   const angular = require('angular');
   const app = require('./index.module');
 
