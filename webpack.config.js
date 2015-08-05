@@ -20,6 +20,10 @@
         {
           test: /\.scss$/,
           loader: 'style!css!autoprefixer!sass'
+        },
+        {
+          test: /\.js$/,
+          loaders: ['ng-annotate']
         }
       ]
     }
