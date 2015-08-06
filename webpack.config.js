@@ -8,12 +8,12 @@
 
   module.exports = {
     context: app,
-     entry: {
-        app: ['webpack/hot/dev-server', './index.js']
+    entry: {
+      app: ['webpack/hot/dev-server', './index.js']
     },
     output: {
-        path: app,
-        filename: 'bundle.js'
+      path: app + '/dist',
+      filename: 'bundle.js'
     },
     module: {
       loaders: [
@@ -23,7 +23,8 @@
         },
         {
           test: /\.js$/,
-          loaders: ['ng-annotate']
+          loader: 'ng-annotate!babel',
+          exclude: /node_modules/
         }
       ]
     }
