@@ -1,14 +1,9 @@
-(function() {
-  'use strict';
+import indexStyle from './index.scss';
+import angular from 'angular';
+import app from './index.module';
 
-  require('./index.scss');
-
-  const angular = require('angular');
-  const app = require('./index.module');
-
-  angular.element(document).ready(function() {
-    angular.bootstrap(document.body, [app.name], {
-      strictDi: true
-    });
+angular.element(document).ready(() => {
+  angular.bootstrap(document.body, [ app.name ], {
+    strictDi: true
   });
-}());
+});

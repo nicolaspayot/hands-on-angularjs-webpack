@@ -1,11 +1,5 @@
-(function() {
-  'use strict';
+import angular from 'angular';
+import menu from './menu.directive';
 
-  const angular = require('angular');
-
-  const menuModule = angular.module('app.menu', []);
-
-  menuModule.directive('menu', require('./menu.directive'));
-
-  module.exports = menuModule;
-}());
+export default angular.module('app.menu', [])
+  .directive('menu', menu);

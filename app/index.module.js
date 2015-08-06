@@ -1,9 +1,6 @@
-(function() {
-  'use strict';
+import angular from 'angular';
+import menu from './menu/menu.module';
 
-  const angular = require('angular');
-
-  module.exports = angular.module('app', [
-    require('./menu/menu.module').name
-  ]);
-}());
+export default angular.module('app', [
+  menu.name
+]);
