@@ -5,7 +5,9 @@
   "author": "Nicolas Payot",
   "license": "ISC",
   "scripts": {
-    "start": "node node_modules/.bin/webpack-dev-server --content-base app/ --devtool eval --hot --progress --colors"
+    "start": "node node_modules/.bin/webpack-dev-server --content-base app/ --hot --progress --colors",
+    "clean": "rm -rf dist || true",
+    "dist": "npm run clean && NODE_ENV=\"prod\" node node_modules/.bin/webpack -p --progress --colors && cp app/index.html dist"
   },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
