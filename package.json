@@ -5,9 +5,9 @@
   "author": "Nicolas Payot",
   "license": "ISC",
   "scripts": {
-    "start": "node node_modules/.bin/webpack-dev-server --content-base app/ --hot --progress --colors",
+    "start": "webpack-dev-server --content-base app/ --hot --progress --colors",
     "clean": "rm -rf dist || true",
-    "dist": "npm run clean && NODE_ENV=\"prod\" node node_modules/.bin/webpack -p --progress --colors && cp app/index.html dist"
+    "dist": "npm run clean && NODE_ENV=\"prod\" webpack -p --progress --colors && cp app/index.html dist"
   },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
@@ -20,7 +20,7 @@
     "eslint-plugin-angular": "^0.3.1",
     "ng-annotate-loader": "0.0.6",
     "ng-cache-loader": "0.0.9",
-    "node-sass": "^3.2.0",
+    "node-sass": "^3.3.3",
     "sass-loader": "^1.0.3",
     "style-loader": "^0.12.3",
     "webpack": "^1.10.5",
